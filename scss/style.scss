@@ -1,0 +1,24 @@
+//--------------------------IMPORTS----------------------------
+@import url("https://fonts.googleapis.com/css2?family=Red+Hat+Text:wght@700&display=swap");
+
+//--------------------------COLORS----------------------------
+
+// Primary
+$grayish-blue: hsl(237, 18%, 59%);
+$soft-red: hsl(345, 95%, 68%);
+
+// Neutral
+$white: hsl(0, 0%, 100%);
+$dark-desaturated-blue: hsl(236, 21%, 26%);
+$very-dark-blue: hsl(235, 16%, 14%);
+$very-dark-mostly-black-blue: hsl(234, 17%, 12%);
+
+//--------------------------STYLES----------------------------
+
+.attribution {
+  font-size: 11px;
+  text-align: center;
+  a {
+    color: hsl(228, 45%, 44%);
+  }
+}
