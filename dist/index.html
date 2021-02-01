@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.a89af6ed.png">
+    <title>Frontend Mentor | Launch countdown timer</title>
+    <link rel="stylesheet" href="/style.a6dae8f7.css">
+  <script src="/style.a6dae8f7.js"></script></head>
+
+  <body>
+    <div class="container">
+      <div class="title">
+        <h2>We're launching soon</h2>
+      </div>
+
+      <!-- Trigger/Open The Modal -->
+      <button id="modalBtn" class="modalBtn">
+        <img src="/icon-gear.21067f9b.svg" alt="config">
+      </button>
+
+      <div id="countdown-clock" class="countdown-clock">
+        <!-- Days -->
+        <div class="countdown days">
+          <div class="countdown-card">
+            <div id="card-top" class="card-top">
+              <span id="days-number">00</span>
+            </div>
+            <div id="card-bottom" class="card-bottom">
+              <span id="days-number">00</span>
+            </div>
+          </div>
+          <div class="flip-card">
+            <div id="flip-card-top-d" class="flip-card-top">
+              <span id="flip-days-number">00</span>
+            </div>
+            <div id="flip-card-bottom-d" class="flip-card-bottom">
+              <span id="flip-days-number">00</span>
+            </div>
+          </div>
+          <p>days</p>
+        </div>
+        <!-- Hours -->
+        <div class="countdown hours">
+          <div class="countdown-card">
+            <div id="card-top" class="card-top">
+              <span id="hours-number">00</span>
+            </div>
+            <div id="card-bottom" class="card-bottom">
+              <span id="hours-number">00</span>
+            </div>
+          </div>
+          <div class="flip-card">
+            <div id="flip-card-top-h" class="flip-card-top">
+              <span id="flip-hours-number">00</span>
+            </div>
+            <div id="flip-card-bottom-h" class="flip-card-bottom">
+              <span id="flip-hours-number">00</span>
+            </div>
+          </div>
+          <p>hours</p>
+        </div>
+        <!-- Minutes -->
+        <div class="countdown minutes">
+          <div class="countdown-card">
+            <div id="card-top" class="card-top">
+              <span id="minutes-number">00</span>
+            </div>
+            <div id="card-bottom" class="card-bottom">
+              <span id="minutes-number">00</span>
+            </div>
+          </div>
+          <div class="flip-card">
+            <div id="flip-card-top-m" class="flip-card-top">
+              <span id="flip-minutes-number">00</span>
+            </div>
+            <div id="flip-card-bottom-m" class="flip-card-bottom">
+              <span id="flip-minutes-number">00</span>
+            </div>
+          </div>
+          <p>minutes</p>
+        </div>
+        <!-- Seconds -->
+        <div class="countdown seconds">
+          <div class="countdown-card">
+            <div id="card-top" class="card-top">
+              <span id="seconds-number">00</span>
+            </div>
+            <div id="card-bottom" class="card-bottom">
+              <span id="seconds-number">00</span>
+            </div>
+          </div>
+          <div class="flip-card">
+            <div id="flip-card-top-s" class="flip-card-top">
+              <span id="flip-seconds-number">00</span>
+            </div>
+            <div id="flip-card-bottom-s" class="flip-card-bottom">
+              <span id="flip-seconds-number">00</span>
+            </div>
+          </div>
+          <p>Seconds</p>
+        </div>
+      </div>
+
+      <footer>
+        <div class="social">
+          <a href="https://discord.com/invite/3GC6TJd" target="_blank">
+            <img src="/icon-discord.62e47bdb.svg" alt="Discord">
+          </a>
+          <a href="https://www.linkedin.com/" target="_blank">
+            <img src="/icon-linkedin.964fd22a.svg" alt="LinkedIn">
+          </a>
+          <a href="https://github.com/SebasEC96/launch-countdown-timer" target="_blank">
+            <img src="/icon-github.8c5935a6.svg" alt="GitHub">
+          </a>
+        </div>
+        <div class="attribution">
+          <p>
+            Challenge by
+            <a href="https://www.frontendmentor.io/challenges/launch-countdown-timer-N0XkGfyz-" target="_blank">Frontend Mentor</a>. Coded by
+            <a href="https://github.com/SebasEC96/launch-countdown-timer">SebasEC</a>.
+          </p>
+        </div>
+      </footer>
+
+      <!-- Form Modal -->
+      <div id="modal" class="modal">
+        <!-- Modal content -->
+        <div class="modal-content">
+          <span class="close" id="closeModal">
+            <img src="/icon-close.1add023a.svg" alt="close">
+          </span>
+
+          <form id="clockForm" name="clock-form" class="clock-form">
+            <div class="input-group">
+              <label for="dayInput">Days</label>
+              <input type="number" id="dayInput" name="day" min="0" max="99" required="">
+            </div>
+            <div class="input-group">
+              <label for="hourInput">Hours</label>
+              <input type="number" id="hourInput" name="hour" min="0" max="23" required="">
+            </div>
+            <div class="input-group">
+              <label for="minuteInput">Minutes</label>
+              <input type="number" id="minminuteInputute" name="minute" min="0" max="59" required="">
+            </div>
+            <div class="input-group">
+              <label for="secondInput">Seconds</label>
+              <input type="number" id="secondInput" name="second" min="0" max="59" required="">
+            </div>
+            <input type="submit" value="Start!" class="startBtn">
+          </form>
+        </div>
+      </div>
+    </div>
+    <script src="/app.a0488aa9.js"></script>
+  </body>
+</html>

@@ -1,0 +1,237 @@
+@import url("https://fonts.googleapis.com/css2?family=Red+Hat+Text:wght@700&display=swap");
+* {
+  padding: 0;
+  margin: 0;
+}
+
+html {
+  height: 100vh;
+  font-family: "Red Hat Text", sans-serif;
+}
+
+body {
+  height: 100%;
+  background: url("/bg-stars.a0b4604f.svg") top/100% 80% no-repeat, url("/pattern-hills.f72c10e5.svg") bottom/100% 20% no-repeat, -webkit-gradient(linear, left top, left bottom, from(#191a24), to(#1e1f29));
+  background: url("/bg-stars.a0b4604f.svg") top/100% 80% no-repeat, url("/pattern-hills.f72c10e5.svg") bottom/100% 20% no-repeat, linear-gradient(to bottom, #191a24, #1e1f29);
+  background-repeat: no-repeat;
+}
+
+body .container {
+  height: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+body .container .title {
+  margin: 8.5rem 8rem 8rem 8rem;
+  font-weight: 700;
+  color: white;
+  text-transform: uppercase;
+  letter-spacing: 0.8rem;
+}
+
+body .container .countdown-clock {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: space-evenly;
+      -ms-flex-pack: space-evenly;
+          justify-content: space-evenly;
+  width: 60rem;
+}
+
+body .container .countdown-clock .countdown {
+  position: relative;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+body .container .countdown-clock .countdown .countdown-card, body .container .countdown-clock .countdown .flip-card {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  width: 12rem;
+  border: 1px solid red;
+}
+
+body .container .countdown-clock .countdown .countdown-card .card-top, body .container .countdown-clock .countdown .flip-card .card-top {
+  height: 6rem;
+  width: 100%;
+  border: 1px solid green;
+  background-color: #2c2c44;
+  -webkit-transform-origin: bottom;
+          transform-origin: bottom;
+  overflow: hidden;
+  position: relative;
+}
+
+body .container .countdown-clock .countdown .countdown-card .card-top span, body .container .countdown-clock .countdown .flip-card .card-top span {
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  -webkit-transform: translate(-50%, 50%);
+          transform: translate(-50%, 50%);
+  font-size: 7rem;
+  line-height: 1;
+  color: #fb6087;
+}
+
+body .container .countdown-clock .countdown .countdown-card .card-bottom, body .container .countdown-clock .countdown .flip-card .card-bottom {
+  height: 6rem;
+  width: 100%;
+  border: 1px solid green;
+  background-color: #34364f;
+  -webkit-transform-origin: top;
+          transform-origin: top;
+  overflow: hidden;
+  position: relative;
+}
+
+body .container .countdown-clock .countdown .countdown-card .card-bottom span, body .container .countdown-clock .countdown .flip-card .card-bottom span {
+  position: absolute;
+  top: 0;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+  font-size: 7rem;
+  line-height: 1;
+  color: #fb6087;
+}
+
+body .container .countdown-clock .countdown .flip-card {
+  -webkit-animation: transform 1s;
+          animation: transform 1s;
+  -webkit-perspective: 800px;
+          perspective: 800px;
+  top: 0;
+  position: absolute;
+  z-index: 1;
+}
+
+body .container .countdown-clock .countdown .flip-card .animate-top {
+  -webkit-animation: top-to-bottom 0.5s ease-in;
+          animation: top-to-bottom 0.5s ease-in;
+}
+
+@-webkit-keyframes top-to-bottom {
+  0% {
+    -webkit-transform: rotate3d(0);
+            transform: rotate3d(0);
+  }
+  100% {
+    -webkit-transform: rotate3d(-1, 0, 0, 90deg);
+            transform: rotate3d(-1, 0, 0, 90deg);
+  }
+}
+
+@keyframes top-to-bottom {
+  0% {
+    -webkit-transform: rotate3d(0);
+            transform: rotate3d(0);
+  }
+  100% {
+    -webkit-transform: rotate3d(-1, 0, 0, 90deg);
+            transform: rotate3d(-1, 0, 0, 90deg);
+  }
+}
+
+body .container .countdown-clock .countdown .flip-card .animate-bottom {
+  -webkit-animation: bottom-to-top 1s ease-out;
+          animation: bottom-to-top 1s ease-out;
+}
+
+@-webkit-keyframes bottom-to-top {
+  0% {
+    -webkit-transform: rotate3d(1, 0, 0, 90deg);
+            transform: rotate3d(1, 0, 0, 90deg);
+  }
+  50% {
+    -webkit-transform: rotate3d(1, 0, 0, 90deg);
+            transform: rotate3d(1, 0, 0, 90deg);
+  }
+  100% {
+    -webkit-transform: rotate3d(0);
+            transform: rotate3d(0);
+  }
+}
+
+@keyframes bottom-to-top {
+  0% {
+    -webkit-transform: rotate3d(1, 0, 0, 90deg);
+            transform: rotate3d(1, 0, 0, 90deg);
+  }
+  50% {
+    -webkit-transform: rotate3d(1, 0, 0, 90deg);
+            transform: rotate3d(1, 0, 0, 90deg);
+  }
+  100% {
+    -webkit-transform: rotate3d(0);
+            transform: rotate3d(0);
+  }
+}
+
+body .container .countdown-clock .countdown p {
+  margin: 2rem 0;
+  text-transform: uppercase;
+  letter-spacing: 0.6rem;
+  color: #8486a9;
+}
+
+body .container footer {
+  position: absolute;
+  bottom: 0;
+}
+
+body .container footer .social {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: space-evenly;
+      -ms-flex-pack: space-evenly;
+          justify-content: space-evenly;
+  padding: 2rem;
+}
+
+body .container footer .attribution {
+  padding: 2rem;
+  font-size: 11px;
+  text-align: center;
+}
+
+body .container footer .attribution p {
+  color: #8486a9;
+}
+
+body .container footer .attribution p a {
+  color: #3e52a3;
+}
+
+
+/*# sourceMappingURL=/style.78032849.css.map */
