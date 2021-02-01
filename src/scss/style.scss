@@ -30,16 +30,16 @@ $clock-width-1024: 50rem;
 $card-width-1024: 10rem;
 $card-tb-height-1024: 5rem;
 $span-font-size-1024: 6rem;
-// >376px && <1024px
+// >375px && <1024px
 $clock-width-768: 40rem;
 $card-width-768: 8rem;
 $card-tb-height-768: 4rem;
 $span-font-size-768: 5rem;
-// <=376px
-$clock-width-376: 20rem;
-$card-width-376: 4rem;
-$card-tb-height-376: 2rem;
-$span-font-size-376: 2rem;
+// <=375px
+$clock-width-375: 20rem;
+$card-width-375: 4rem;
+$card-tb-height-375: 2rem;
+$span-font-size-375: 2rem;
 
 //--------------------------STYLES----------------------------
 * {
@@ -132,7 +132,7 @@ body {
         width: $clock-width-768;
       }
       @include media("<=phone") {
-        width: $clock-width-376;
+        width: $clock-width-375;
       }
 
       .countdown {
@@ -145,7 +145,6 @@ body {
           display: flex;
           flex-direction: column;
           align-items: center;
-          width: 12rem;
           position: relative;
           z-index: 1;
           @include media(">=desktop") {
@@ -158,7 +157,7 @@ body {
             width: $card-width-768;
           }
           @include media("<=phone") {
-            width: $card-width-376;
+            width: $card-width-375;
           }
           .card-top {
             width: 100%;
@@ -177,7 +176,7 @@ body {
               height: $card-tb-height-768;
             }
             @include media("<=phone") {
-              height: $card-tb-height-376;
+              height: $card-tb-height-375;
             }
             //-------------------Little semi-circles-------------------
             &::before {
@@ -231,13 +230,12 @@ body {
                 font-size: $span-font-size-768;
               }
               @include media("<=phone") {
-                font-size: $span-font-size-376;
+                font-size: $span-font-size-375;
               }
             }
           }
 
           .card-bottom {
-            height: 6rem;
             width: 100%;
             border-radius: 0 0 10px 10px;
             background-color: $bottom-card;
@@ -257,7 +255,7 @@ body {
               box-shadow: 0 0.5rem $very-dark-mostly-black-blue;
             }
             @include media("<=phone") {
-              height: $card-tb-height-376;
+              height: $card-tb-height-375;
               box-shadow: 0 0.25rem $very-dark-mostly-black-blue;
             }
             //-------------------Little semi-circles-------------------
@@ -312,7 +310,7 @@ body {
                 font-size: $span-font-size-768;
               }
               @include media("<=phone") {
-                font-size: $span-font-size-376;
+                font-size: $span-font-size-375;
               }
             }
           }
@@ -342,7 +340,7 @@ body {
               height: $card-tb-height-768;
             }
             @include media("<=phone") {
-              height: $card-tb-height-376;
+              height: $card-tb-height-375;
             }
             //-------------------Little semi-circles-------------------
             &::before {
@@ -366,7 +364,6 @@ body {
               position: absolute;
               bottom: 0;
               right: 0;
-              
               border-radius: 100% 0 0 0;
               content: " ";
               background: $very-dark-mostly-black-blue;
@@ -397,7 +394,7 @@ body {
                 font-size: $span-font-size-768;
               }
               @include media("<=phone") {
-                font-size: $span-font-size-376;
+                font-size: $span-font-size-375;
               }
             }
           }
@@ -419,13 +416,13 @@ body {
               height: $card-tb-height-768;
             }
             @include media("<=phone") {
-              height: $card-tb-height-376;
+              height: $card-tb-height-375;
             }
             //-------------------Little semi-circles-------------------
             &::before {
               position: absolute;
               top: 0;
-              left: 0;        
+              left: 0;
               border-radius: 0 0 100% 0;
               content: " ";
               background: $very-dark-mostly-black-blue;
@@ -442,7 +439,7 @@ body {
             &::after {
               position: absolute;
               top: 0;
-              right: 0;            
+              right: 0;
               border-radius: 0 0 0 100%;
               content: " ";
               background: $very-dark-mostly-black-blue;
@@ -473,10 +470,11 @@ body {
                 font-size: $span-font-size-768;
               }
               @include media("<=phone") {
-                font-size: $span-font-size-376;
+                font-size: $span-font-size-375;
               }
             }
           }
+
           @keyframes top-to-bottom {
             0% {
               transform: rotate3d(0);
@@ -502,9 +500,7 @@ body {
           }
         }
         p {
-          margin: 2rem 0;
           text-transform: uppercase;
-          letter-spacing: 0.6rem;
           color: $grayish-blue;
 
           @include media(">=desktop") {
@@ -532,11 +528,11 @@ body {
     }
     //-------------------MODAL-------------------
     .modal {
-      display: flex;
-      position: fixed;
-      z-index: 5;
       width: 100%;
       height: 100%;
+      display: flex;
+      position: fixed;
+      z-index: 3;
       justify-content: center;
       align-items: center;
       background-color: rgba(0, 0, 0, 0.8);
@@ -548,7 +544,7 @@ body {
       .modal-content {
         height: 30rem;
         width: 20rem;
-        background-color: rgba($very-dark-blue, 0.8);
+        background-color: rgba(37, 29, 44, 0.8);
         border: 2px solid $dark-desaturated-blue;
         border-radius: 1rem;
         display: flex;
@@ -604,14 +600,14 @@ body {
                 border: 0.5px solid $soft-red-bottom;
                 border-radius: 0.5rem;
               }
-              /* Chrome, Safari, Edge, Opera */
+              // Chrome, Safari, Edge, Opera
               &::-webkit-outer-spin-button,
               &::-webkit-inner-spin-button {
                 -webkit-appearance: none;
                 margin: 0;
               }
 
-              /* Firefox */
+              // Firefox
               &[type="number"] {
                 -moz-appearance: textfield;
               }
